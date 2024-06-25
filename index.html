@@ -3,92 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links Importantes</title>
+    <title>Links Úteis</title>
+    
+    <!-- Estilos para as barras de rolagem -->
     <style>
+        /* Estilos para as barras de rolagem */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px; /* Para barras de rolagem horizontais */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #404f4c; /* Cor do fundo da barra de rolagem */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1c2b29; /* Cor do indicador da barra de rolagem */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1c2b29; /* Cor do indicador da barra de rolagem ao passar o mouse */
+        }
+
+        /* Estilos gerais */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Cor de fundo do corpo */
+            color: #333; /* Cor do texto */
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #0073e6;
-            color: white;
-            padding: 15px 20px;
+
+        .header {
+            background-color: #4CAF50; /* Cor de fundo do cabeçalho */
+            color: white; /* Cor do texto no cabeçalho */
             text-align: center;
-            font-size: 1.5em;
+            padding: 10px 0;
+            margin-bottom: 20px;
         }
-        main {
+
+        .content {
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
+            text-align: center;
         }
-        ul {
-            list-style: none;
+
+        .link-list {
+            list-style-type: none;
             padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #0073e6;
-            background-color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        a:hover {
-            background-color: #005bb5;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
         }
-        .container li {
-            flex: 1 1 calc(50% - 20px);
-            box-sizing: border-box;
+
+        .link-list li {
+            margin: 10px;
+            transition: transform 0.2s ease-in-out; /* Animação de escala suave nos itens da lista */
         }
-        footer {
-            text-align: center;
-            padding: 15px 20px;
-            background-color: #0073e6;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        .link-list li a {
+            color: #4CAF50; /* Cor dos links */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid transparent; /* Borda inicial transparente */
+            border-radius: 25px; /* Borda arredondada */
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transição suave */
+            display: inline-block;
+            background-color: white; /* Fundo branco inicial */
+        }
+
+        .link-list li a:hover {
+            background-color: #4CAF50; /* Fundo verde ao passar o mouse */
+            color: white; /* Texto branco ao passar o mouse */
+            border-color: #4CAF50; /* Borda verde ao passar o mouse */
+        }
+
+        .link-list li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #4CAF50; /* Cor da linha animada */
+            transition: width 0.3s; /* Animação da linha */
+        }
+
+        .link-list li a:hover::after {
+            width: 100%; /* Expandir a linha ao passar o mouse */
         }
     </style>
+    
+    <!-- Ícone da aba do navegador (favicon) -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Ícone para dispositivos Apple (touch icon) -->
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
-    <header>
-        Shortcuts
-    </header>
-    <main>
-        <ul class="container">
-            <li><a href="https://app.slack.com/client/T03TLFB7TEG/dms?selected_team_id=T03TLFB7TEG&skip_onboarding=1&accepted_invite_id=I078YUB7S2Y" target="_blank">SLACK (Google Chrome)</a></li>
-            <li><a href="https://www.notion.so/astropay/Knowledge-Base-f58dcbf2ec214e468cf4ff5b9af3e606" target="_blank">Notion (KB)</a></li>
-            <li><a href="https://okta.astropay.com" target="_blank">OKTA</a></li>
-            <li><a href="https://support.prod.astro/" target="_blank">Support Panel</a></li>
-            <li><a href="https://astropayglobal.atlassian.net/servicedesk/customer/portals" target="_blank">Jira</a></li>
-            <li><a href="https://astropay.kustomerapp.com/app" target="_blank">Kustomer (Google Chrome)</a></li>
-            <li><a href="https://docs.google.com/document/d/1VWR6bM1jgyHCX4LJnVU-wGqrV1-5MeLosF8hwQkp4hI/edit?usp=sharing" target="_blank">Doc treinamento</a></li>
-            <li><a href="https://astropay.retool.com/auth/invite/dc68a97a926e2db32c792600f579413f?" target="_blank">Retool</a></li>
-            <li><a href="https://looker.astropay.int/" target="_blank">Looker</a></li>
-	    <li><a href="https://teams.microsoft.com/" target="_blank">Teams</a></li>
-            <li><a href="https://outlook.office.com/" target="_blank">Outlook</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/1atps-FLZvown5xT3SPxXqOgAPBFOiFGtDIYCuYwTvK0/edit?gid=0#gid=0" target="_blank">Rewards (Planilha)</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/17Bp1oBUmpOjsUypIUY1Mtbd6KTy3a6NSELgMTWJ7Wfo/edit?usp=sharing" target="_blank">Dúvidas</a></li>
-        </ul>
-    </main>
-    <footer>
-        © 2024 LUKE
-    </footer>
+
+<div class="header">
+    <h1>Links Úteis</h1>
+</div>
+
+<div class="content">
+    <h2>Links Disponíveis</h2>
+    <ul class="link-list">
+        <li><a href="https://app.slack.com/client/T03TLFB7TEG/dms?selected_team_id=T03TLFB7TEG&skip_onboarding=1&accepted_invite_id=I078YUB7S2Y" target="_blank">SLACK (Google Chrome)</a></li>
+        <li><a href="https://www.notion.so/astropay/Knowledge-Base-f58dcbf2ec214e468cf4ff5b9af3e606" target="_blank">Notion (KB)</a></li>
+        <li><a href="https://okta.astropay.com" target="_blank">OKTA</a></li>
+        <li><a href="https://support.prod.astro/" target="_blank">Support Panel</a></li>
+        <li><a href="https://astropayglobal.atlassian.net/servicedesk/customer/portals" target="_blank">Jira</a></li>
+        <li><a href="https://astropay.kustomerapp.com/app" target="_blank">Kustomer (Google Chrome)</a></li>
+        <li><a href="https://docs.google.com/document/d/1VWR6bM1jgyHCX4LJnVU-wGqrV1-5MeLosF8hwQkp4hI/edit?usp=sharing" target="_blank">Doc treinamento</a></li>
+        <li><a href="https://astropay.retool.com/auth/invite/dc68a97a926e2db32c792600f579413f?" target="_blank">Retool</a></li>
+        <li><a href="https://looker.astropay.int/" target="_blank">Looker</a></li>
+        <li><a href="https://looker.astropay.int/looks/2806?toggle=det,fil,pik&qid=Z3bK5mdQ2K6z2Id3V9gmAQ" target="_blank">Looker Debit Card</a></li>
+        <li><a href="https://teams.microsoft.com/" target="_blank">Teams</a></li>
+        <li><a href="https://outlook.office.com/" target="_blank">Outlook</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1atps-FLZvown5xT3SPxXqOgAPBFOiFGtDIYCuYwTvK0/edit?gid=0#gid=0" target="_blank">Rewards (Planilha)</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/17Bp1oBUmpOjsUypIUY1Mtbd6KTy3a6NSELgMTWJ7Wfo/edit?usp=sharing" target="_blank">Dúvidas</a></li>
+    </ul>
+</div>
+
 </body>
 </html>
